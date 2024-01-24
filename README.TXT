@@ -14,7 +14,15 @@ whether you can use it, as i'm no lawyer. Unofficially, it's pretty safe to say 
 enterprise applications, such as Twitch streaming, you're pretty safe.
 -----
 
-the Robodog Chatbot is an IRC-based Twitch chatbot template, made to make it easier for sufficiently knowledgable streamers to host their own chatbots.
+EXTREMELY IMPORTANT: THIS VERSION HAS MULTIPLE FLAWS. AS I WORK TO FIX THESE
+I WILL UPDATE THIS FILE. PLEASE MAKE SURE YOU CHECK BACK AND UPDATE FREQUENTLY BY COPY/PASTING YOUR COMMANDS
+INTO THE UPDATED TEMPLATE.
+THERE IS, NOTABLY, A MINOR ISSUE REGARDING NON-MODS POTENTIALLY BEING ABLE TO USE MOD COMMANDS.
+---DO NOT HOOK UP IMPORTANT COMMANDS (like /ban) TO THIS BOT UNTIL IT IS FIXED.---
+even though this potential exploit has NOT been tested, it is still a possibility.
+please be smart; thanks.
+----
+The Robodog Chatbot is an IRC-based Twitch chatbot template, made to make it easier for sufficiently knowledgable streamers to host their own chatbots.
 Many chatbots nowadays have a lack of customizability- this chatbot has (nearly) infinite, with some technical restrictions (usually brought about by me
 being too lazy to implement them.) You can usually work around these, or use the workarounds provided.
 
@@ -93,4 +101,31 @@ use == or in.
 Does the command need moderator permission?
 ---
 if so: use the following statement:
-elif f"{prefix}your_command" == msg, 
+elif f"{prefix}your_command" == msg and checkMod(userName) == True:
+	your_command()
+
+pleae note that, as with the == endeavour, this is NOT optimal. i will try to publish a
+change to the checkMod() function to make it more secure. As of right now, please
+be aware that if the user's name is part of a moderator's name, it MAY still run the command,
+despite them not being a mod.
+e.g. "alex" in modsList["alex_themod", "grace-moderator"] == true.
+
+Another note: the f before the quotes and {prefix} are NEEDED if you
+want your commands to sync to whatever your prefix is saved as in the config.
+IF YOU DO NOT DO THIS, IT WILL BE EVEN MORE OF A MESS THAN THIS ALREADY IS.
+
+Look at the examples i've posted (or will post) and get yourself
+acquainted with how it all works. as a very small initial starting project,
+I would reccommend adding a command to show a link to your discord, and then add that to your commands list.
+
+so far, guide done.
+--------
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+EXTRA SUPER DUPER IMPORTANT NOTE:
+DO NOT, UNDER ANY CIRCUMSTANCES, USE THE exec() FUNCTION WITH
+ANY USER INPUT. This includes even usernames!
+This function will execute whatever code is in it, INCLUDING MALICIOUS CODE.
+It's easy enough for some scriptkiddie to have your machine print out something
+nefarious to chat. LIKE YOUR TOKEN, or address. PLEASE BE SMART.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
