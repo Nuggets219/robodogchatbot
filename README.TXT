@@ -8,7 +8,10 @@ ALL THE HEAVY BACKEND LIFTING DONE BY LCOLONQ AND JAKECREATESSTUFF
 
 TURNED INTO THIS TEMPLATE PROGRAM BY NUGGETS219
 
-this code is free for all to use, but if you're a company get your own programmers on this.
+This code is free for individuals to use, but the IRC function may have some restraints
+on coporations using it. Make sure to visit python-irc's webpage for clarification on 
+whether you can use it, as i'm no lawyer. Unofficially, it's pretty safe to say that in non-
+enterprise applications, such as Twitch streaming, you're pretty safe.
 -----
 
 the Robodog Chatbot is an IRC-based Twitch chatbot template, made to make it easier for sufficiently knowledgable streamers to host their own chatbots.
@@ -69,4 +72,11 @@ Now, you're ready to start making your own programs for the bot!
 Standard python is fully supported - just make sure you look at the other programs so you know what to do!
 use userName and msg when getting the senders' username and message!
 
-I may update these docs later, until then, have fun!
+----------PROGRAMMING YOUR OWN COMMANDS----------
+
+1. make your program into a function ABOVE the "onEvent" function
+definition. i won't give a lecture on Python basics, but if you look at
+W3Schools' tutorials and docs, you should get a pretty good idea.
+2. add your command to the list in the "onEvent" statement using the following linear flowchart:
+
+Does the command need moderator permission?
