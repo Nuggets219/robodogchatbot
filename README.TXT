@@ -79,4 +79,18 @@ definition. i won't give a lecture on Python basics, but if you look at
 W3Schools' tutorials and docs, you should get a pretty good idea.
 2. add your command to the list in the "onEvent" statement using the following linear flowchart:
 
+Does the command take an "input"?
+---
+if so, use "in" instead of == in the first section of the 
+loop you'll see next. This will check if the command is IN the message, rather
+than if the whole message IS the command. this is useful for not triggering the bot on 
+those cases where someone goes, "how do I see my..." and you can
+freely reply with, "do !(whatever)". I'll probably update this format
+to check if the beginning part of the measage matches the command, but until then,
+use == or in.
+---
+
 Does the command need moderator permission?
+---
+if so: use the following statement:
+elif f"{prefix}your_command" == msg, 
