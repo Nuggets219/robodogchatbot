@@ -19,7 +19,7 @@ This may seem challenging, but don't worry- included in this README is a guide t
 
   ---THE """QUICK""" SETUP GUIDE---
 
-First, install Python. The version should be at least Python 3.12.
+First, install Python. The version should be at least Python 3.12. (https://www.python.org/downloads/)
 Once you have installed Python, hit Windows + R, and type "cmd.exe" in the window provided.
 Don't be intmidated, this will be easy!
 Type EXACTLY: pip install irc
