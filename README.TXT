@@ -1,5 +1,7 @@
-Robodog Chatbot V0.1
-last updated 1/21/24
+Robodog Chatbot V0.2
+last updated 1/29/24
+
+NEW! - Economy module now avaliable at https://github.com/Nuggets219/robodogEcon
 
 USES PYPI (more on that below)
 QUICK START GUIDE IS FOR WINDOWS USERS!
